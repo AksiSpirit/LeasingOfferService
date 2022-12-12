@@ -1,7 +1,10 @@
 package ru.aksi.leasingofferservice.model;
 
+import jakarta.persistence.Entity;
+
 import java.util.UUID;
 
+@Entity
 public class Office {
     private UUID id;
     private String address;

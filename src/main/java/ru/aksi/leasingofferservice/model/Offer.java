@@ -1,9 +1,12 @@
 package ru.aksi.leasingofferservice.model;
 
+import jakarta.persistence.Entity;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Entity
 public class Offer {
     private UUID id;
     private String serialNumber;

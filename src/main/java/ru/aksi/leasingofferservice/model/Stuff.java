@@ -1,8 +1,11 @@
 package ru.aksi.leasingofferservice.model;
 
+import jakarta.persistence.Entity;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Entity
 public class Stuff {
     private UUID id;
     private String surname;
