@@ -1,7 +1,9 @@
 package ru.aksi.leasingofferservice.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
+import ru.aksi.leasingofferservice.model.util.LocalDateSerializer;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -21,6 +23,7 @@ public class Stuff {
     private Boolean sex;
     @Column(name = "birth_date")
     @JsonProperty("birth_date")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate birthDate;
     @Column(name = "salary_multiplier")
     @JsonProperty("salary_multiplier")

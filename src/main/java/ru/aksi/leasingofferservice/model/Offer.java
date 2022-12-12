@@ -1,7 +1,9 @@
 package ru.aksi.leasingofferservice.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
+import ru.aksi.leasingofferservice.model.util.LocalDateSerializer;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -16,12 +18,15 @@ public class Offer {
     private String serialNumber;
     @Column(name = "sign_date")
     @JsonProperty("sign_date")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate signDate;
     @Column(name = "ending_date")
     @JsonProperty("ending_date")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate endingDate;
     @Column(name = "start_date")
     @JsonProperty("start_date")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate startDate;
     @ManyToOne(targetEntity = Client.class, optional = false)
     @JoinColumn(name = "client_id")
