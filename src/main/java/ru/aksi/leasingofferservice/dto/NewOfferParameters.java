@@ -1,12 +1,18 @@
 package ru.aksi.leasingofferservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class NewOfferParameters {
+    @JsonProperty("clinet_id")
     private UUID clientId;
+    @JsonProperty("stuff_id")
     private UUID stuffId;
+    @JsonProperty("start_date")
     private LocalDate startDate;
+    @JsonProperty("ending_date")
     private LocalDate endingDate;
 
 

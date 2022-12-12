@@ -1,11 +1,16 @@
 package ru.aksi.leasingofferservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Map;
 import java.util.Set;
 
 public class OfferStatistics {
+    @JsonProperty("stuff_statistics")
     private Map<String, Integer> stuffStatistics;
+    @JsonProperty("client_statistics")
     private Map<String, Integer> clientStatistics;
+    @JsonProperty("client_surnames")
     private Set<String> clientSurnames;
 
 
