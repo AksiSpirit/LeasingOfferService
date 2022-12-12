@@ -1,6 +1,7 @@
 package ru.aksi.leasingofferservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aksi.leasingofferservice.dto.OfferStatistics;
 import ru.aksi.leasingofferservice.model.Offer;
 import ru.aksi.leasingofferservice.repository.ClientRepository;
@@ -9,6 +10,7 @@ import ru.aksi.leasingofferservice.repository.OfferRepository;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Service
 public class StatisticsService {
     private OfferRepository offerRepository;
     private ClientRepository clientRepository;
