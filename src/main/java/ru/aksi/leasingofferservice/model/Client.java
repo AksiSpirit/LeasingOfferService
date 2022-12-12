@@ -1,6 +1,7 @@
 package ru.aksi.leasingofferservice.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -23,10 +24,12 @@ public class Client {
     @Column(name = "sex")
     private Boolean sex;
     @Column(name = "birth_date")
+    @JsonProperty("birth_date")
     private LocalDate birthDate;
     @Column(name = "inn")
     private String inn;
     @Column(name = "passport_serial")
+    @JsonProperty("passport_serial")
     private String passportSerial;
     @Column(name = "phone")
     private String phone;

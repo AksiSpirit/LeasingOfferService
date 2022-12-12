@@ -1,5 +1,6 @@
 package ru.aksi.leasingofferservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,14 +12,17 @@ import java.util.UUID;
 @Table(name = "DB_OFFICE")
 public class Office {
     @Id
+    @JsonProperty("id")
     private UUID id;
     @Column(name = "name")
     private String name;
     @Column(name = "address")
     private String address;
     @Column(name = "law_address")
+    @JsonProperty("law_address")
     private String lawAddress;
     @Column(name = "cabinet_count")
+    @JsonProperty("cabinet_count")
     private Integer cabinetCount;
 
     public UUID getId() {

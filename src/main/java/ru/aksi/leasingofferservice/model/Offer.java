@@ -1,5 +1,6 @@
 package ru.aksi.leasingofferservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -11,12 +12,16 @@ public class Offer {
     @Id
     private UUID id;
     @Column(name = "serial_number")
+    @JsonProperty("serial_number")
     private String serialNumber;
     @Column(name = "sign_date")
+    @JsonProperty("sign_date")
     private LocalDate signDate;
     @Column(name = "ending_date")
+    @JsonProperty("ending_date")
     private LocalDate endingDate;
     @Column(name = "start_date")
+    @JsonProperty("start_date")
     private LocalDate startDate;
     @ManyToOne(targetEntity = Client.class, optional = false)
     @JoinColumn(name = "client_id")

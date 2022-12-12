@@ -1,5 +1,6 @@
 package ru.aksi.leasingofferservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -19,8 +20,10 @@ public class Stuff {
     @Column(name = "sex")
     private Boolean sex;
     @Column(name = "birth_date")
+    @JsonProperty("birth_date")
     private LocalDate birthDate;
     @Column(name = "salary_multiplier")
+    @JsonProperty("salary_multiplier")
     private Double salaryMultiplier;
     @ManyToOne(targetEntity = Position.class, optional = false)
     @JoinColumn(name = "position_id")
