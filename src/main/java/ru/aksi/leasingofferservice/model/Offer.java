@@ -1,12 +1,14 @@
 package ru.aksi.leasingofferservice.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Table(name = "offer")
 public class Offer {
     private UUID id;
     private String serialNumber;

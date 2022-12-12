@@ -1,10 +1,12 @@
 package ru.aksi.leasingofferservice.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 import java.util.UUID;
 
 @Entity
+@Table(name = "position")
 public class Position {
     private UUID id;
     private String name;
