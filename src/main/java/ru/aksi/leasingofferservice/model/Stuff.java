@@ -1,21 +1,29 @@
 package ru.aksi.leasingofferservice.model;
 
-import jakarta.persistence.Entity;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "stuff")
+@Table(name = "DB_STUFF")
 public class Stuff {
+    @Id
     private UUID id;
+    @Column(name = "surname")
     private String surname;
+    @Column(name = "name")
     private String name;
+    @Column(name = "patronymic")
     private String patronymic;
+    @Column(name = "sex")
     private Boolean sex;
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+    @Column(name = "salary_multiplier")
     private Double salaryMultiplier;
+    @ManyToOne(targetEntity = Position.class, optional = false)
+    @JoinColumn(name = "position_id")
     private Position position;
 
 

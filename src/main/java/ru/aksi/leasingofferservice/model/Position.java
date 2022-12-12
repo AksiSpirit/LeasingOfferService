@@ -1,15 +1,20 @@
 package ru.aksi.leasingofferservice.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "position")
+@Table(name = "DB_POSITION")
 public class Position {
+    @Id
     private UUID id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "salary")
     private Integer salary;
 
 

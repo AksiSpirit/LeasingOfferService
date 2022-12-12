@@ -1,21 +1,31 @@
 package ru.aksi.leasingofferservice.model;
 
-import jakarta.persistence.Entity;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "offer")
+@Table(name = "DB_OFFER")
 public class Offer {
+    @Id
     private UUID id;
+    @Column(name = "serial_number")
     private String serialNumber;
+    @Column(name = "sign_date")
     private LocalDate signDate;
+    @Column(name = "ending_date")
     private LocalDate endingDate;
+    @Column(name = "start_date")
     private LocalDate startDate;
+    @ManyToOne(targetEntity = Client.class, optional = false)
+    @JoinColumn(name = "client_id")
     private Client client;
+    @ManyToOne(targetEntity = Stuff.class, optional = false)
+    @JoinColumn(name = "stuff_id")
     private Stuff stuff;
+    @ManyToOne(targetEntity = Office.class, optional = false)
+    @JoinColumn(name = "office_id")
     private Office office;
 
 

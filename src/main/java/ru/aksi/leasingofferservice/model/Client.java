@@ -1,22 +1,34 @@
 package ru.aksi.leasingofferservice.model;
 
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "client")
+@Table(name = "DB_CLIENT")
 public class Client {
+    @Id
     private UUID id;
+    @Column(name = "surname")
     private String surname;
+    @Column(name = "name")
     private String name;
+    @Column(name = "patronymic")
     private String patronymic;
+    @Column(name = "sex")
     private Boolean sex;
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+    @Column(name = "inn")
     private String inn;
+    @Column(name = "passport_serial")
     private String passportSerial;
+    @Column(name = "phone")
     private String phone;
 
 
