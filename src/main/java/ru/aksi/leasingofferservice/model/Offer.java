@@ -1,14 +1,15 @@
 package ru.aksi.leasingofferservice.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Offer {
     private UUID id;
     private String serialNumber;
-    private LocalDateTime signDate;
-    private LocalDateTime endingDate;
-    private LocalDateTime startDate;
+    private LocalDate signDate;
+    private LocalDate endingDate;
+    private LocalDate startDate;
     private Client client;
     private Stuff stuff;
     private Office office;
@@ -30,27 +31,27 @@ public class Offer {
         this.serialNumber = serialNumber;
     }
 
-    public LocalDateTime getSignDate() {
+    public LocalDate getSignDate() {
         return signDate;
     }
 
-    public void setSignDate(LocalDateTime signDate) {
+    public void setSignDate(LocalDate signDate) {
         this.signDate = signDate;
     }
 
-    public LocalDateTime getEndingDate() {
+    public LocalDate getEndingDate() {
         return endingDate;
     }
 
-    public void setEndingDate(LocalDateTime endingDate) {
+    public void setEndingDate(LocalDate endingDate) {
         this.endingDate = endingDate;
     }
 
-    public LocalDateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
@@ -84,9 +85,9 @@ public class Offer {
 
     public Offer(UUID id,
                  String serialNumber,
-                 LocalDateTime signDate,
-                 LocalDateTime endingDate,
-                 LocalDateTime startDate,
+                 LocalDate signDate,
+                 LocalDate endingDate,
+                 LocalDate startDate,
                  Client client,
                  Stuff stuff,
                  Office office) {
