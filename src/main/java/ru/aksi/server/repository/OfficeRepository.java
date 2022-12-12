@@ -1,8 +1,8 @@
-package ru.aksi.leasingofferservice.repository;
+package ru.aksi.server.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.aksi.leasingofferservice.model.Office;
+import ru.aksi.server.model.Office;
 
 import java.util.UUID;
 

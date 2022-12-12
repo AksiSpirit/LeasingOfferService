@@ -1,20 +1,16 @@
-package ru.aksi.leasingofferservice.model;
-
+package ru.aksi.server.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import ru.aksi.leasingofferservice.model.util.LocalDateSerializer;
+import jakarta.persistence.*;
+import ru.aksi.server.model.util.LocalDateSerializer;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "DB_CLIENT")
-public class Client {
+@Table(name = "DB_STUFF")
+public class Stuff {
     @Id
     private UUID id;
     @Column(name = "surname")
@@ -29,13 +25,12 @@ public class Client {
     @JsonProperty("birth_date")
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate birthDate;
-    @Column(name = "inn")
-    private String inn;
-    @Column(name = "passport_serial")
-    @JsonProperty("passport_serial")
-    private String passportSerial;
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "salary_multiplier")
+    @JsonProperty("salary_multiplier")
+    private Double salaryMultiplier;
+    @ManyToOne(targetEntity = Position.class, optional = false)
+    @JoinColumn(name = "position_id")
+    private Position position;
 
 
     public UUID getId() {
@@ -86,51 +81,41 @@ public class Client {
         this.birthDate = birthDate;
     }
 
-    public String getInn() {
-        return inn;
+    public Double getSalaryMultiplier() {
+        return salaryMultiplier;
     }
 
-    public void setInn(String inn) {
-        this.inn = inn;
+    public void setSalaryMultiplier(Double salaryMultiplier) {
+        this.salaryMultiplier = salaryMultiplier;
     }
 
-    public String getPassportSerial() {
-        return passportSerial;
+    public Position getPosition() {
+        return position;
     }
 
-    public void setPassportSerial(String passportSerial) {
-        this.passportSerial = passportSerial;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
 
-    public Client() {
+    public Stuff() {
     }
 
-    public Client(UUID id,
-                  String surname,
-                  String name,
-                  String patronymic,
-                  Boolean sex,
-                  LocalDate birthDate,
-                  String inn,
-                  String passportSerial,
-                  String phone) {
+    public Stuff(UUID id,
+                 String surname,
+                 String name,
+                 String patronymic,
+                 Boolean sex,
+                 LocalDate birthDate,
+                 Double salaryMultiplier,
+                 Position position) {
         this.id = id;
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
         this.sex = sex;
         this.birthDate = birthDate;
-        this.inn = inn;
-        this.passportSerial = passportSerial;
-        this.phone = phone;
+        this.salaryMultiplier = salaryMultiplier;
+        this.position = position;
     }
 }

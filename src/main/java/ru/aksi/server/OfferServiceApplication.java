@@ -1,4 +1,4 @@
-package ru.aksi.leasingofferservice;
+package ru.aksi.server;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,11 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import ru.aksi.leasingofferservice.model.Client;
-import ru.aksi.leasingofferservice.model.Office;
-import ru.aksi.leasingofferservice.model.Position;
-import ru.aksi.leasingofferservice.model.Stuff;
+import ru.aksi.server.model.Client;
+import ru.aksi.server.model.Office;
+import ru.aksi.server.model.Position;
+import ru.aksi.server.model.Stuff;
 import ru.aksi.leasingofferservice.repository.*;
+import ru.aksi.server.repository.*;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.aksi.leasingofferservice.model.util;
+package ru.aksi.server.model.util;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;

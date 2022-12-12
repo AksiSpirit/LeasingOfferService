@@ -1,4 +1,4 @@
-package ru.aksi.leasingofferservice.dto;
+package ru.aksi.server.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

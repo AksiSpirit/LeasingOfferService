@@ -1,9 +1,9 @@
-package ru.aksi.leasingofferservice.model;
+package ru.aksi.server.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
-import ru.aksi.leasingofferservice.model.util.LocalDateSerializer;
+import ru.aksi.server.model.util.LocalDateSerializer;
 
 import java.time.LocalDate;
 import java.util.UUID;

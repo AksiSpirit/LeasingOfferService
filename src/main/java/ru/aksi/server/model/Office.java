@@ -1,4 +1,4 @@
-package ru.aksi.leasingofferservice.model;
+package ru.aksi.server.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;

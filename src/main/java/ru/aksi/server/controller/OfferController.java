@@ -1,17 +1,17 @@
-package ru.aksi.leasingofferservice.controller;
+package ru.aksi.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.aksi.leasingofferservice.dto.NewOfferParameters;
-import ru.aksi.leasingofferservice.dto.OfferStatistics;
-import ru.aksi.leasingofferservice.model.Client;
-import ru.aksi.leasingofferservice.model.Offer;
-import ru.aksi.leasingofferservice.model.Stuff;
-import ru.aksi.leasingofferservice.repository.ClientRepository;
-import ru.aksi.leasingofferservice.repository.OfferRepository;
-import ru.aksi.leasingofferservice.repository.StuffRepository;
-import ru.aksi.leasingofferservice.service.OfferService;
-import ru.aksi.leasingofferservice.service.StatisticsService;
+import ru.aksi.server.dto.NewOfferParameters;
+import ru.aksi.server.dto.OfferStatistics;
+import ru.aksi.server.model.Client;
+import ru.aksi.server.model.Offer;
+import ru.aksi.server.model.Stuff;
+import ru.aksi.server.repository.ClientRepository;
+import ru.aksi.server.repository.OfferRepository;
+import ru.aksi.server.repository.StuffRepository;
+import ru.aksi.server.service.OfferService;
+import ru.aksi.server.service.StatisticsService;
 
 import java.util.List;
 import java.util.UUID;

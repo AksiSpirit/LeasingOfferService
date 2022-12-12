@@ -1,11 +1,11 @@
-package ru.aksi.leasingofferservice.controller;
+package ru.aksi.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.aksi.leasingofferservice.model.Office;
-import ru.aksi.leasingofferservice.repository.OfficeRepository;
+import ru.aksi.server.model.Office;
+import ru.aksi.server.repository.OfficeRepository;
 
 import java.util.List;
 import java.util.UUID;

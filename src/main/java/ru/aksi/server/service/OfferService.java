@@ -1,12 +1,12 @@
-package ru.aksi.leasingofferservice.service;
+package ru.aksi.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.aksi.leasingofferservice.model.Client;
-import ru.aksi.leasingofferservice.model.Offer;
-import ru.aksi.leasingofferservice.model.Stuff;
-import ru.aksi.leasingofferservice.repository.OfferRepository;
-import ru.aksi.leasingofferservice.repository.OfficeRepository;
+import ru.aksi.server.model.Client;
+import ru.aksi.server.model.Offer;
+import ru.aksi.server.model.Stuff;
+import ru.aksi.server.repository.OfferRepository;
+import ru.aksi.server.repository.OfficeRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
