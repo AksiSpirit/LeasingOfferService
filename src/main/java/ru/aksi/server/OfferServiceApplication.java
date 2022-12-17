@@ -47,7 +47,8 @@ public class OfferServiceApplication {
 					new Position(UUID.fromString("538b8667-676d-4fe9-b79f-8eceebdbcb45"), "Работяга 1 уровня", 15000),
 					new Position(UUID.fromString("3ac4ce02-21cc-456f-b189-4503ea711fe8"), "Работяга 2 уровня", 20000),
 					new Position(UUID.randomUUID(), "Работяга 3 уровня", 25000),
-					new Position(UUID.randomUUID(), "Начальник", 3000000)
+					new Position(UUID.randomUUID(), "Начальник", 300000),
+					new Position(UUID.randomUUID(), "Депутат", 5000000)
 			));
 			stuffRepository.saveAll(List.of(
 					new Stuff(UUID.randomUUID(), "Surname1", "Name1", "Patronymic1", true, LocalDate.now().minusYears(3), 1.0, new Position(UUID.fromString("538b8667-676d-4fe9-b79f-8eceebdbcb45"), "Работяга 1 уровня", 15000)),
