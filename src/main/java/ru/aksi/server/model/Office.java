@@ -14,8 +14,6 @@ public class Office {
     @Id
     @JsonProperty("id")
     private UUID id;
-    @Column(name = "name")
-    private String name;
     @Column(name = "address")
     private String address;
     @Column(name = "law_address")
@@ -31,14 +29,6 @@ public class Office {
 
     public void setId(UUID id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getAddress() {
@@ -68,9 +58,8 @@ public class Office {
     public Office() {
     }
 
-    public Office(UUID id, String name, String address, String lawAddress, Integer cabinetCount) {
+    public Office(UUID id, String address, String lawAddress, Integer cabinetCount) {
         this.id = id;
-        this.name = name;
         this.address = address;
         this.lawAddress = lawAddress;
         this.cabinetCount = cabinetCount;
