@@ -3,7 +3,10 @@ package ru.aksi.server.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
+import ru.aksi.server.model.util.ClientSerializer;
 import ru.aksi.server.model.util.LocalDateSerializer;
+import ru.aksi.server.model.util.OfficeSerializer;
+import ru.aksi.server.model.util.StuffSerializer;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -30,12 +33,15 @@ public class Offer {
     private LocalDate startDate;
     @ManyToOne(targetEntity = Client.class, optional = false)
     @JoinColumn(name = "client_id")
+    @JsonSerialize(using = ClientSerializer.class)
     private Client client;
     @ManyToOne(targetEntity = Stuff.class, optional = false)
     @JoinColumn(name = "stuff_id")
+    @JsonSerialize(using = StuffSerializer.class)
     private Stuff stuff;
     @ManyToOne(targetEntity = Office.class, optional = false)
     @JoinColumn(name = "office_id")
+    @JsonSerialize(using = OfficeSerializer.class)
     private Office office;
 
 
