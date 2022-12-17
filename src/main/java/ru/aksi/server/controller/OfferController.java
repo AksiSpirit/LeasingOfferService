@@ -3,7 +3,7 @@ package ru.aksi.server.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.aksi.server.dto.NewOfferParameters;
-import ru.aksi.server.dto.OfferStatistics;
+import ru.aksi.server.dto.OfferStatistic;
 import ru.aksi.server.model.Client;
 import ru.aksi.server.model.Offer;
 import ru.aksi.server.model.Stuff;
@@ -11,7 +11,7 @@ import ru.aksi.server.repository.ClientRepository;
 import ru.aksi.server.repository.OfferRepository;
 import ru.aksi.server.repository.StuffRepository;
 import ru.aksi.server.service.OfferService;
-import ru.aksi.server.service.StatisticsService;
+import ru.aksi.server.service.StatisticService;
 
 import java.util.List;
 import java.util.UUID;
@@ -23,15 +23,15 @@ public class OfferController {
     private OfferService offerService;
     private ClientRepository clientRepository;
     private StuffRepository stuffRepository;
-    private StatisticsService statisticsService;
+    private StatisticService statisticService;
 
     @Autowired
-    public OfferController(OfferRepository offerRepository, OfferService offerService, ClientRepository clientRepository, StuffRepository stuffRepository, StatisticsService statisticsService) {
+    public OfferController(OfferRepository offerRepository, OfferService offerService, ClientRepository clientRepository, StuffRepository stuffRepository, StatisticService statisticService) {
         this.offerRepository = offerRepository;
         this.offerService = offerService;
         this.clientRepository = clientRepository;
         this.stuffRepository = stuffRepository;
-        this.statisticsService = statisticsService;
+        this.statisticService = statisticService;
     }
 
     @GetMapping("")
@@ -43,9 +43,9 @@ public class OfferController {
         return offerRepository.findById(offerId).orElse(null);
     }
 
-    @GetMapping("/statistics")
-    public OfferStatistics getOfferStatistics() {
-        return statisticsService.getOfferStatistic();
+    @GetMapping("/statistic")
+    public OfferStatistic getOfferStatistic() {
+        return statisticService.getOfferStatistic();
     }
 
     @PutMapping("")

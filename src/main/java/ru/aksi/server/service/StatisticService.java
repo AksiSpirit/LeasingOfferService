@@ -2,7 +2,7 @@ package ru.aksi.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.aksi.server.dto.OfferStatistics;
+import ru.aksi.server.dto.OfferStatistic;
 import ru.aksi.server.model.Offer;
 import ru.aksi.server.repository.ClientRepository;
 import ru.aksi.server.repository.OfferRepository;
@@ -11,17 +11,17 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class StatisticsService {
+public class StatisticService {
     private OfferRepository offerRepository;
     private ClientRepository clientRepository;
 
     @Autowired
-    public StatisticsService(OfferRepository offerRepository, ClientRepository clientRepository) {
+    public StatisticService(OfferRepository offerRepository, ClientRepository clientRepository) {
         this.offerRepository = offerRepository;
         this.clientRepository = clientRepository;
     }
 
-    public OfferStatistics getOfferStatistic() {
+    public OfferStatistic getOfferStatistic() {
         List<Offer> offers = offerRepository.findAll();
         Map<String, Integer> stuffStatistic = new HashMap<>();
         Map<String, Integer> clientStatistic = new HashMap<>();
@@ -47,6 +47,6 @@ public class StatisticsService {
                 })
                 .collect(Collectors.toSet());
 
-        return new OfferStatistics(stuffStatistic, clientStatistic, clientSurnames);
+        return new OfferStatistic(stuffStatistic, clientStatistic, clientSurnames);
     }
 }

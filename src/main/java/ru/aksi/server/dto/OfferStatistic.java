@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
 import java.util.Set;
 
-public class OfferStatistics {
+public class OfferStatistic {
     @JsonProperty("stuff_statistics")
     private Map<String, Integer> stuffStatistics;
     @JsonProperty("client_statistics")
@@ -38,9 +38,9 @@ public class OfferStatistics {
         this.clientSurnames = clientSurnames;
     }
 
-    public OfferStatistics() {}
+    public OfferStatistic() {}
 
-    public OfferStatistics(Map<String, Integer> stuffStatistics, Map<String, Integer> clientStatistics, Set<String> clientSurnames) {
+    public OfferStatistic(Map<String, Integer> stuffStatistics, Map<String, Integer> clientStatistics, Set<String> clientSurnames) {
         this.stuffStatistics = stuffStatistics;
         this.clientStatistics = clientStatistics;
         this.clientSurnames = clientSurnames;
