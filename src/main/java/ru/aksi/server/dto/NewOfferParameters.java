@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class NewOfferParameters {
-    @JsonProperty("clinet_id")
+    @JsonProperty("client_id")
     private UUID clientId;
     @JsonProperty("stuff_id")
     private UUID stuffId;
