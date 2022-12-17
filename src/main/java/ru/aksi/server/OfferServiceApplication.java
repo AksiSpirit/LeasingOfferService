@@ -11,7 +11,6 @@ import ru.aksi.server.model.Client;
 import ru.aksi.server.model.Office;
 import ru.aksi.server.model.Position;
 import ru.aksi.server.model.Stuff;
-import ru.aksi.leasingofferservice.repository.*;
 import ru.aksi.server.repository.*;
 
 import java.time.LocalDate;
