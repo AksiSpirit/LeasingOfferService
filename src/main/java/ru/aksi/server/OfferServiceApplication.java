@@ -40,8 +40,8 @@ public class OfferServiceApplication {
 					new Client(UUID.randomUUID(), "Surname3", "Name3", "Patronymic3", false, LocalDate.now().minusYears(22), "7865434", "000000", "0000000000005")
 			));
 			officeRepository.saveAll(List.of(
-					new Office(UUID.fromString("22b30e4e-3406-4881-88e2-3913f51e2782"), "Улица Ахахаха, дом 34", "г. Мухосранск, улица Ахахаха, дом 13", 112),
-					new Office(UUID.randomUUID(), "Улица Страданий, дом 13", "г. Мухосранск, улица Страданий, дом 666", 7)
+					new Office(UUID.fromString("22b30e4e-3406-4881-88e2-3913f51e2782"), "Улица Ахахаха, дом 13", "г. Мухосранск, улица Ахахаха, дом 13", 112),
+					new Office(UUID.randomUUID(), "Улица Страданий, дом 666", "г. Мухосранск, улица Страданий, дом 666", 7)
 			));
 			positionRepository.saveAll(List.of(
 					new Position(UUID.fromString("538b8667-676d-4fe9-b79f-8eceebdbcb45"), "Работяга 1 уровня", 15000),
