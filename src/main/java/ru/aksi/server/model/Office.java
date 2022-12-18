@@ -19,9 +19,9 @@ public class Office {
     @Column(name = "law_address")
     @JsonProperty("law_address")
     private String lawAddress;
-    @Column(name = "cabinet_count")
-    @JsonProperty("cabinet_count")
-    private Integer cabinetCount;
+    @Column(name = "cabinets_count")
+    @JsonProperty("cabinets_count")
+    private Integer cabinetsCount;
 
     public UUID getId() {
         return id;
@@ -47,21 +47,21 @@ public class Office {
         this.lawAddress = lawAddress;
     }
 
-    public Integer getCabinetCount() {
-        return cabinetCount;
+    public Integer getCabinetsCount() {
+        return cabinetsCount;
     }
 
-    public void setCabinetCount(Integer cabinetCount) {
-        this.cabinetCount = cabinetCount;
+    public void setCabinetsCount(Integer cabinetsCount) {
+        this.cabinetsCount = cabinetsCount;
     }
 
     public Office() {
     }
 
-    public Office(UUID id, String address, String lawAddress, Integer cabinetCount) {
+    public Office(UUID id, String address, String lawAddress, Integer cabinetsCount) {
         this.id = id;
         this.address = address;
         this.lawAddress = lawAddress;
-        this.cabinetCount = cabinetCount;
+        this.cabinetsCount = cabinetsCount;
     }
 }
