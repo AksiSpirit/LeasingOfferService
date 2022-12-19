@@ -34,7 +34,7 @@ public class OfferService {
         offer.setStartDate(startDate);
         offer.setClient(client);
         offer.setStuff(stuff);
-        offer.setOffice(officeRepository.findById(UUID.fromString("22b30e4e-3406-4881-88e2-3913f51e2782")).orElseThrow());
+        offer.setOffice(officeRepository.findAll().get(0));
         offerRepository.save(offer);
         return offer;
     }
