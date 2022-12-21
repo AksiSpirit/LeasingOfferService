@@ -17,7 +17,6 @@ public class Office {
     @Column(name = "address")
     private String address;
     @Column(name = "law_address")
-    @JsonProperty("law_address")
     private String lawAddress;
     @Column(name = "cabinets_count")
     @JsonProperty("cabinets_count")
